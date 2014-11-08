@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rikrop.Core.Framework", "Rikrop.Core.Framework\Rikrop.Core.Framework.csproj", "{CED54596-6179-430A-82F0-C95FC550E618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rikrop.Core.Framework.Test", "Rikrop.Core.Framework.Test\Rikrop.Core.Framework.Test.csproj", "{C1DED12C-6F96-415C-9323-97EAD9C51B6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A0186A99-86E9-4B08-8332-89A388A71C2C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rikrop.Core.Framework.40", "Rikrop.Core.Framework40\Rikrop.Core.Framework.40.csproj", "{160370D8-4F9E-4F22-8CF6-C5A422205DCE}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vadimyan.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Rikrop.Core.Framework\\Rikrop.Core.Framework.csproj
+		SccProjectName1 = Rikrop.Core.Framework
+		SccLocalPath1 = Rikrop.Core.Framework
+		SccProjectUniqueName2 = Rikrop.Core.Framework.Test\\Rikrop.Core.Framework.Test.csproj
+		SccProjectName2 = Rikrop.Core.Framework.Test
+		SccLocalPath2 = Rikrop.Core.Framework.Test
+		SccProjectUniqueName3 = Rikrop.Core.Framework40\\Rikrop.Core.Framework.40.csproj
+		SccProjectName3 = Rikrop.Core.Framework40
+		SccLocalPath3 = Rikrop.Core.Framework40
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CED54596-6179-430A-82F0-C95FC550E618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED54596-6179-430A-82F0-C95FC550E618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED54596-6179-430A-82F0-C95FC550E618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED54596-6179-430A-82F0-C95FC550E618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1DED12C-6F96-415C-9323-97EAD9C51B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1DED12C-6F96-415C-9323-97EAD9C51B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1DED12C-6F96-415C-9323-97EAD9C51B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1DED12C-6F96-415C-9323-97EAD9C51B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160370D8-4F9E-4F22-8CF6-C5A422205DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160370D8-4F9E-4F22-8CF6-C5A422205DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160370D8-4F9E-4F22-8CF6-C5A422205DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160370D8-4F9E-4F22-8CF6-C5A422205DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal
