@@ -1,6 +1,6 @@
 ﻿using System;
+using Moq;
 using NUnit.Framework;
-using Telerik.JustMock;
 
 namespace Rikrop.Core.Framework.Test
 {
@@ -15,10 +15,10 @@ namespace Rikrop.Core.Framework.Test
 
         private ITodayNowProvider CreateFakeTodayNowProvider(DateTime now)
         {
-            var todayNowProvider = Mock.Create<ITodayNowProvider>();
-            Mock.Arrange(() => todayNowProvider.Today).Returns(now.Date);
-            Mock.Arrange(() => todayNowProvider.Now).Returns(now);
-            return todayNowProvider;
+            var todayNowProviderStub = new Mock<ITodayNowProvider>();
+            todayNowProviderStub.Setup(todayNowProvider => todayNowProvider.Today).Returns(now.Date);
+            todayNowProviderStub.Setup(todayNowProvider => todayNowProvider.Now).Returns(now.Date);
+            return todayNowProviderStub.Object;
         }
 
         [Test]
@@ -106,26 +106,26 @@ namespace Rikrop.Core.Framework.Test
         public void Now_must_be_returned_from_today_now_provider()
         {
             var expectedNow = new DateTime(2012, 1, 1, 14, 53, 41);
-            var todayNowProvider = Mock.Create<ITodayNowProvider>();
-            Mock.Arrange(() => todayNowProvider.Now).Returns(expectedNow).MustBeCalled();
+            
+            var todayNowProviderStub = new Mock<ITodayNowProvider>();
+            todayNowProviderStub.Setup(todayNowProvider => todayNowProvider.Now).Returns(expectedNow);
 
-            var provider = new DateTimeProvider(todayNowProvider);
+            var provider = new DateTimeProvider(todayNowProviderStub.Object);
 
             Assert.AreEqual(expectedNow, provider.Now);
-            Mock.Assert(todayNowProvider);
         }
 
         [Test]
         public void Today_must_be_returned_from_today_now_provider()
         {
             var expectedToday = new DateTime(2012, 1, 1);
-            var todayNowProvider = Mock.Create<ITodayNowProvider>();
-            Mock.Arrange(() => todayNowProvider.Today).Returns(expectedToday).MustBeCalled();
 
-            var provider = new DateTimeProvider(todayNowProvider);
+            var todayNowProviderStub = new Mock<ITodayNowProvider>();
+            todayNowProviderStub.Setup(todayNowProvider => todayNowProvider.Today).Returns(expectedToday);
+
+            var provider = new DateTimeProvider(todayNowProviderStub.Object);
 
             Assert.AreEqual(expectedToday, provider.Today);
-            Mock.Assert(todayNowProvider);
         }
     }
 }

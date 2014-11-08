@@ -188,10 +188,10 @@
     <Compile Include="Services\IServiceExecutor.cs" />
     <Compile Include="SimpleTimer.cs" />
     <Compile Include="TodayNowProvider.cs" />
+    <Compile Include="TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Rikrop.Core.Framework.csproj.nuspec" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
